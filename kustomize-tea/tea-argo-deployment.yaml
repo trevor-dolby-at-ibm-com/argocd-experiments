@@ -25,3 +25,5 @@ spec:
         volumeMounts:
         - name: secret-volume-2
           mountPath: /var/run/secrets/jdbc
+      imagePullSecrets:
+      - name: 'regcred'
