@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tea-argo
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: tea-argo
+  template:
+    metadata:
+      labels:
+        app: tea-argo
+    spec:
+      containers:
+      - image: image-registry.openshift-image-registry.svc.cluster.local:5000/default/tea-tekton:latest
+        name: tea-argo
+        ports:
+        - containerPort: 7800

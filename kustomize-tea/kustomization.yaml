@@ -1,0 +1,7 @@
+namePrefix: kustomize-
+
+resources:
+- tea-argo-deployment.yaml
+- tea-argo-svc.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
