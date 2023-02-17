@@ -13,8 +13,15 @@ spec:
       labels:
         app: tea-argo
     spec:
+      volumes:
+      - name: secret-volume-2
+        secret:
+          secretName: jdbc-secret
       containers:
       - image: image-registry.openshift-image-registry.svc.cluster.local:5000/default/tea-tekton:latest
         name: tea-argo
         ports:
         - containerPort: 7800
+        volumeMounts:
+        - name: secret-volume-2
+          mountPath: /var/run/secrets/jdbc
