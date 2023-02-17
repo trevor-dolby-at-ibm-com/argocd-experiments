@@ -2,7 +2,6 @@ kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
   name: tea-argo-route
-  namespace: default
 spec:
   host: tea-argo-route-argocd-apps.apps-crc.testing
   to:
