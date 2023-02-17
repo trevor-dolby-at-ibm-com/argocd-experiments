@@ -7,4 +7,4 @@ spec:
   - port: 7800	
     targetPort: 7800
   selector:	
-    app: tea-argo
+    app: kustomize-tea-argo
