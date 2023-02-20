@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tea-argo
+spec:
+  template:
+    spec:
+      containers:
+      - name: tea-argo
+        env:
+        - name: ENV
+          value: "dev-plaintext"
