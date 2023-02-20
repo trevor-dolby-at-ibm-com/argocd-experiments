@@ -7,4 +7,5 @@ spec:
   template:
     spec:
       containers:
-      - image: image-registry.openshift-image-registry.svc.cluster.local:5000/default/tea-tekton:latest
+      - name: tea-argo
+        image: image-registry.openshift-image-registry.svc.cluster.local:5000/default/tea-tekton:latest
