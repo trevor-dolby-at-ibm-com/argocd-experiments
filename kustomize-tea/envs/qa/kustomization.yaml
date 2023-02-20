@@ -8,5 +8,5 @@ components:
   - ../../variants/secure
 
 patchesStrategicMerge:
-- deployment.yml
-- version.yml
+- deployment.yaml
+- version.yaml
