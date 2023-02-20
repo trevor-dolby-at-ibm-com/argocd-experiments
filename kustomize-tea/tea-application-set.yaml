@@ -12,12 +12,13 @@ spec:
       - namespace: qa
   template:
     metadata:
-      name: {{cluster}}-tea-argo
+      name: '{{namespace}}-tea-argo'
     spec:
       project: default
       source:
         repoURL: https://github.com/trevor-dolby-at-ibm-com/argocd-experiments.git
         targetRevision: HEAD
-        path: kustomize-tea/envs//{{cluster}}
+        path: kustomize-tea/envs//{{namespace}}
       destination:
+        server: https://kubernetes.default.svc
         namespace: tea-argo-{{namespace}}
