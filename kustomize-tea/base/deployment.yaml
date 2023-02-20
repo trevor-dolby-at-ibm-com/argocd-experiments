@@ -27,3 +27,4 @@ spec:
           mountPath: /var/run/secrets/jdbc
       imagePullSecrets:
       - name: 'regcred'
+      serviceAccountName: tea-service-account
