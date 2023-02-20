@@ -1,7 +1,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: guestbook
+  name: tea-argo
+  namespace: openshift-gitops
 spec:
   generators:
   - list:
@@ -11,8 +12,9 @@ spec:
       - namespace: qa
   template:
     metadata:
-      name: '{{cluster}}-tea-argo'
+      name: {{cluster}}-tea-argo
     spec:
+      project: default
       source:
         repoURL: https://github.com/trevor-dolby-at-ibm-com/argocd-experiments.git
         targetRevision: HEAD
