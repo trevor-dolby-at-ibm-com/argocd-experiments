@@ -4,6 +4,9 @@ kind: Kustomization
 resources:
 - ../../base
 
+transformers:
+- ace-configuration-transformer.yaml
+
 configMapGenerator:
   - name: test-cmap
     behavior: merge

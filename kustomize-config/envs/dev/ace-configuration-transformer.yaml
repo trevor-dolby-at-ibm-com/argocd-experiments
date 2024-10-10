@@ -1,0 +1,8 @@
+apiVersion: notused/v1
+kind: basic-transformer
+metadata:
+  name: ace-configuration-transformer
+  annotations:
+    config.kubernetes.io/function: |
+      exec: 
+        path: ../../plugins/ace-configuration-transformer.sh
