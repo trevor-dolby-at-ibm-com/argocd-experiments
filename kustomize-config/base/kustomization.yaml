@@ -5,5 +5,6 @@ configMapGenerator:
   - name: test-cmap
     files:
       - per-env-values.txt
+    behavior: merge
     options:
       disableNameSuffixHash: true
