@@ -3,7 +3,5 @@ kind: Kustomization
 
 configMapGenerator:
   - name: test-cmap
-    files:
-      - per-env-values.txt
     options:
       disableNameSuffixHash: true
