@@ -6,6 +6,7 @@ resources:
 
 configMapGenerator:
   - name: test-cmap
+    behavior: merge
     files:
       - per-env-values.txt
     options:
