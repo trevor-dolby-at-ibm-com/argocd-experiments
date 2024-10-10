@@ -1,10 +1,2 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-
-configMapGenerator:
-  - name: test-cmap
-    files:
-      - per-env-values.txt
-    behavior: merge
-    options:
-      disableNameSuffixHash: true
